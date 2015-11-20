@@ -234,10 +234,9 @@
             $('.date-day').text(day.toString());
             $('.date-time').text(time);
             $('.date-pm').text(ampm);
-            var pageViewParams = {limit: 25, type:'general', unit:'month', from: moment().subtract(31, 'days'), to: moment().subtract(1, 'days')}
+            var pageViewParams = {limit: 25, type:'general', unit:'day', from: moment().subtract(30, 'days'), to: moment()}
             var pageViewQuery = MP.api.segment('searched', 'arrivalCity', pageViewParams)
             pageViewQuery.done(function(results){
-                console.log(pageViewQuery.done(function(results));
                 var data = {}
                 _.each(_.keys(results.values()), function(key){
                     /* sum over data in value of results.values()[key] */
