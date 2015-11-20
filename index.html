@@ -234,7 +234,7 @@
             $('.date-day').text(day.toString());
             $('.date-time').text(time);
             $('.date-pm').text(ampm);
-            var pageViewParams = {limit: 25, type:'general', unit:'month', from: moment().subtract(30, 'days'), to: moment()}
+            var pageViewParams = {limit: 25, type:'general', unit:'month', from: moment().subtract(60, 'days'), to: moment()}
             var pageViewQuery = MP.api.segment('searched', 'arrivalCity', pageViewParams)
             pageViewQuery.done(function(results){
                 var data = {}
